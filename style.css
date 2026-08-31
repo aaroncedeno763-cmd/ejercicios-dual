@@ -1,0 +1,23 @@
+header {
+  background-color: hsl(110, 46%, 42%);
+  margin: 0%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0%;
+  padding: 0%;
+}
+
+.logo {
+  background-color: rgb(114, 201, 172);
+}
+
+.menu {
+  background-color: rgb(114, 201, 172);
+}
+
+.cuenta {
+  background-color: rgb(114, 201, 172);
+}
