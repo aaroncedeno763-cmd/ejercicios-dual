@@ -78,7 +78,7 @@ main {}
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-  padding: 0 5%;
+  padding: 3% 5%;
 }
 
 .tarjeta {
@@ -123,7 +123,7 @@ main {}
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0 5%;
+  padding: 3% 5%;
 }
 
 .sumario summary {
@@ -134,7 +134,7 @@ main {}
 }
 
 .contacto {
-  padding: 0 5%;
+  padding: 3% 5%;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -144,6 +144,11 @@ main {}
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 50%;
+}
+
+.formulario-contacto p {
+  font-size: 1.5rem;
   width: 50%;
 }
 
@@ -159,6 +164,12 @@ main {}
   gap: 0.5rem;
 }
 
+.form-element button {
+  background-color: hsl(186, 17%, 67%);
+  font-size: 3rem;
+  cursor: pointer;
+}
+
 .contacto h2 {
   font-size: 2rem;
 }
@@ -172,7 +183,7 @@ main {}
 }
 
 footer {
-  background-color: hsl(86, 83%, 72%);
+  background-color: hsl(110, 46%, 42%);
   display: flex;
   gap: 3rem;
   justify-content: space-between;
