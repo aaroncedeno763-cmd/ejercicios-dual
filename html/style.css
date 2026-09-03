@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   background-color: hsl(110, 46%, 42%);
   margin: 0;
@@ -124,6 +128,14 @@ main {}
   flex-direction: column;
   gap: 1rem;
   padding: 3% 5%;
+  cursor: pointer;
+}
+
+.sumario details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.5rem;
 }
 
 .sumario summary {

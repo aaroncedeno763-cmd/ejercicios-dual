@@ -1,0 +1,105 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  background-color: var(--verde-oscuro);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  color: var(--blanco-hueso);
+  width: 30rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+header nav ul li a {
+  color: var(--blanco-hueso);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+header nav ul li a:hover {
+  border-bottom-color: var(--dorado);
+}
+
+.cuenta {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cuenta button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.registrate button {
+  background-color: var(--dorado);
+  color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+.iniciar-sesion button {
+  background-color: transparent;
+  color: var(--blanco-hueso);
+  border: 1px solid var(--blanco-hueso);
+}
+
+.cuenta button:hover {
+  opacity: 0.85;
+}
+
+
+.hero-imagen {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  background-color: #0d3b24;
+  background-image:
+    /* foco de luz central, como si fuera de estadio */
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 255, 255, 0.12), transparent 60%),
+    /* rayas de césped cortado, alternando tonos de verde */
+    repeating-linear-gradient(100deg,
+      #0d3b24 0px,
+      #0d3b24 60px,
+      #124a2d 60px,
+      #124a2d 120px);
+}
+
+/* líneas del campo, sutiles, superpuestas */
+.hero-imagen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.hero-imagen picture,
+.hero-imagen img {
+  display: none;
+  /* ya no necesitas la imagen del stock */
+}
