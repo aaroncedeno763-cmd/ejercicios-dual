@@ -1,8 +1,3 @@
-/* ============================================
-   COLORES DEL COLLERENSE
-   Los guardamos aquí una vez, así si luego quieres
-   ajustar algún tono, solo lo cambias en este lugar.
-   ============================================ */
 :root {
   --granate: #6d1a26;
   --granate-oscuro: #4a1119;
@@ -11,7 +6,10 @@
   --tinta: #211a16;
 }
 
-/* Quita los márgenes y espacios que el navegador pone por defecto */
+.ul {
+  list-style: none;
+}
+
 * {
   margin: 0;
   padding: 0;
