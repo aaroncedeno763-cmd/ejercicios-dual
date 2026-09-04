@@ -1,44 +1,78 @@
+/* ============================================
+   COLORES DEL COLLERENSE
+   Los guardamos aquí una vez, así si luego quieres
+   ajustar algún tono, solo lo cambias en este lugar.
+   ============================================ */
+:root {
+  --granate: #6d1a26;
+  --granate-oscuro: #4a1119;
+  --dorado: #c99a4b;
+  --papel: #f2ede3;
+  --tinta: #211a16;
+}
+
+/* Quita los márgenes y espacios que el navegador pone por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* ============================================
+   ENCABEZADO (header)
+   ============================================ */
 header {
   display: flex;
+  /* pone el logo y el nav en fila, uno al lado del otro */
   justify-content: space-between;
+  /* logo a la izquierda, nav a la derecha */
   align-items: center;
+  /* los centra verticalmente */
   padding: 1.2rem 3rem;
-  background-color: var(--verde-oscuro);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background-color: var(--granate);
 }
 
 .logo img {
-  color: var(--blanco-hueso);
-  width: 30rem;
+  width: 8rem;
+  /* tamaño normal de logo */
 }
 
-header nav {
+/* ============================================
+   MENÚ DE NAVEGACIÓN
+   ============================================ */
+nav {
   display: flex;
   align-items: center;
   gap: 2.5rem;
+  /* separación entre el menú y los botones de cuenta */
 }
 
-header nav ul {
+nav ul {
   display: flex;
+  /* pone los links en fila en vez de uno debajo del otro */
   list-style: none;
+  /* quita los puntitos de la lista */
   gap: 1.8rem;
 }
 
-header nav ul li a {
-  color: var(--blanco-hueso);
+nav a {
+  color: var(--papel);
   text-decoration: none;
-  font-size: 0.95rem;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease;
+  /* quita el subrayado del link */
 }
 
-header nav ul li a:hover {
-  border-bottom-color: var(--dorado);
+nav a:hover {
+  color: var(--dorado);
+  /* cambia de color cuando pasas el mouse por encima */
 }
 
+/* ============================================
+   BOTONES DE "REGÍSTRATE" E "INICIA SESIÓN"
+   ============================================ */
 .cuenta {
   display: flex;
   gap: 0.8rem;
@@ -46,60 +80,43 @@ header nav ul li a:hover {
 
 .cuenta button {
   padding: 0.5rem 1.2rem;
-  border-radius: 4px;
   border: none;
-  font-size: 0.9rem;
+  border-radius: 4px;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  /* el mouse cambia a "manita" al pasar por encima */
 }
 
 .registrate button {
   background-color: var(--dorado);
-  color: var(--verde-oscuro);
-  font-weight: 600;
+  color: var(--granate-oscuro);
 }
 
 .iniciar-sesion button {
   background-color: transparent;
-  color: var(--blanco-hueso);
-  border: 1px solid var(--blanco-hueso);
+  color: var(--papel);
+  border: 1px solid var(--papel);
 }
 
-.cuenta button:hover {
-  opacity: 0.85;
-}
-
-
+/* ============================================
+   SECCIÓN HERO (la parte grande de bienvenida)
+   ============================================ */
 .hero-imagen {
-  position: relative;
   min-height: 400px;
-  overflow: hidden;
-  background-color: #0d3b24;
-  background-image:
-    /* foco de luz central, como si fuera de estadio */
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 255, 255, 0.12), transparent 60%),
-    /* rayas de césped cortado, alternando tonos de verde */
-    repeating-linear-gradient(100deg,
-      #0d3b24 0px,
-      #0d3b24 60px,
-      #124a2d 60px,
-      #124a2d 120px);
+  background-color: var(--granate-oscuro);
+  display: flex;
+  flex-direction: column;
+  /* pone el título y el texto uno debajo del otro */
+  justify-content: center;
+  /* los centra verticalmente */
+  align-items: center;
+  /* los centra horizontalmente */
+  text-align: center;
+  color: var(--papel);
+  padding: 2rem;
 }
 
-/* líneas del campo, sutiles, superpuestas */
-.hero-imagen::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 80px 80px;
-  pointer-events: none;
-}
-
-.hero-imagen picture,
-.hero-imagen img {
-  display: none;
-  /* ya no necesitas la imagen del stock */
+.hero-imagen h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dorado);
 }
