@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylespidy.css">
+  <script type="module" src="./srccalculadora/index.js" defer></script>
 </head>
 
 <body>
@@ -18,32 +19,34 @@
 
       <h1>SPIDER-CALC</h1>
 
-      <input type="text" id="pantalla" disabled>
+      <input type="text" class="pantalla" disabled>
 
       <div class="botones">
-        <button onclick="borrarTodo()">C</button>
-        <button onclick="agregar('(')">(</button>
-        <button onclick="agregar(')')">)</button>
-        <button onclick="agregar('/')">/</button>
 
-        <button onclick="agregar('7')">7</button>
-        <button onclick="agregar('8')">8</button>
-        <button onclick="agregar('9')">9</button>
-        <button onclick="agregar('*')">*</button>
+        <button type="button" class="borrar">C</button>
+        <button type="button" data-valor="(">(</button>
+        <button type="button" data-valor=")">)</button>
+        <button type="button" data-valor="/">/</button>
 
-        <button onclick="agregar('4')">4</button>
-        <button onclick="agregar('5')">5</button>
-        <button onclick="agregar('6')">6</button>
-        <button onclick="agregar('-')">-</button>
+        <button type="button" data-valor="7">7</button>
+        <button type="button" data-valor="8">8</button>
+        <button type="button" data-valor="9">9</button>
+        <button type="button" data-valor="*">*</button>
 
-        <button onclick="agregar('1')">1</button>
-        <button onclick="agregar('2')">2</button>
-        <button onclick="agregar('3')">3</button>
-        <button onclick="agregar('+')">+</button>
+        <button type="button" data-valor="4">4</button>
+        <button type="button" data-valor="5">5</button>
+        <button type="button" data-valor="6">6</button>
+        <button type="button" data-valor="-">-</button>
 
-        <button onclick="agregar('0')">0</button>
-        <button onclick="agregar('.')">.</button>
-        <button onclick="calcular()">=</button>
+        <button type="button" data-valor="1">1</button>
+        <button type="button" data-valor="2">2</button>
+        <button type="button" data-valor="3">3</button>
+        <button type="button" data-valor="+">+</button>
+
+        <button type="button" data-valor="0">0</button>
+        <button type="button" data-valor=".">.</button>
+        <button type="button" class="calcular">=</button>
+
       </div>
 
     </div>
@@ -54,7 +57,6 @@
 
   </div>
 
-  <script src="script.js"></script>
 </body>
 
 </html>
