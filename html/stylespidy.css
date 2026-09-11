@@ -93,24 +93,3 @@ button:nth-child(19) {
 .heroe img {
   width: 100%;
 }
-
-@media (max-width: 50rem) {
-  body {
-    padding: 2rem;
-  }
-
-  .contenedor {
-    width: 100%;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .calculadora {
-    width: 100%;
-    max-width: 22rem;
-  }
-
-  .heroe {
-    width: 15rem;
-  }
-}

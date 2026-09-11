@@ -5,15 +5,23 @@ export default (() => {
   const borrarButton = document.querySelector('.borrar')
   const calcularButton = document.querySelector('.calcular')
 
-  // "Haz esto con cada uno de los botones."
+  const signos = ['+', '-', '*', '/']
+
   botones.forEach((boton) => {
 
     boton.addEventListener('click', () => {
-      // esto es para obtener el valor que pusimos en el html
       let valor = boton.dataset.valor
-      // Esto comprueba si el botón tiene un data-valor.
+
       if (valor) {
-        pantalla.value += valor
+        let ultimoCaracter = pantalla.value.slice(-1)
+
+        // Si el último carácter es un signo Y el nuevo valor también es un signo,
+        // reemplazamos el último en vez de añadir otro
+        if (signos.includes(ultimoCaracter) && signos.includes(valor)) {
+          pantalla.value = pantalla.value.slice(0, -1) + valor
+        } else {
+          pantalla.value += valor
+        }
       }
 
     })
@@ -27,7 +35,7 @@ export default (() => {
   calcularButton.addEventListener('click', () => {
 
     try {
-      pantalla.value = eval(pantalla.value)//calcula la operación que está escrita.
+      pantalla.value = eval(pantalla.value)
     } catch {
       pantalla.value = 'Error'
     }
