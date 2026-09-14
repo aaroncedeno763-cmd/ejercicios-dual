@@ -14,9 +14,6 @@
   text-decoration: none;
 }
 
-body {}
-
-
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -167,7 +164,7 @@ nav a:hover {
 .hero-imagen {
   position: relative;
   width: 100%;
-  min-height: 80vh;
+  min-height: 87vh;
   display: flex;
   justify-content: center;
   align-items: center;

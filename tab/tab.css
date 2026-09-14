@@ -1,0 +1,85 @@
+body {
+  background-color: hsl(256, 52%, 70%);
+}
+
+
+.pestañas {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.pestaña {
+  cursor: pointer;
+  height: 2rem;
+  opacity: 1;
+  width: 10rem;
+  border: none;
+  border-radius: 5rem;
+}
+
+.pestaña.descripcion {
+  background-color: hsl(221, 37%, 70%);
+}
+
+.pestaña.informacion {
+  background-color: hsl(221, 37%, 70%);
+}
+
+.pestaña.financiacion {
+  background-color: hsl(221, 37%, 70%);
+}
+
+.pestaña.active {
+  opacity: 0.5;
+}
+
+.contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+.contenido-tab {
+  opacity: 0;
+}
+
+.contenido-tab.active {
+  opacity: 1;
+}
+
+.contenido-tab.descripcion {
+  background-color: hsl(221, 37%, 70%);
+  height: 30vh;
+  width: 30%;
+  position: absolute;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contenido-tab.informacion {
+  background-color: hsl(221, 37%, 70%);
+  height: 30vh;
+  width: 30%;
+  position: absolute;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contenido-tab.financiacion {
+  background-color: hsl(221, 37%, 70%);
+  height: 30vh;
+  width: 30%;
+  position: absolute;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
