@@ -2,5 +2,6 @@ data.json
 hombres.json
 poblacion-por-sexo.json
 total.json
-resultado.json
-total.json
+normalizacion-afiliados.js
+parados-por-año.json
+afiliados-por-municipio-sexo.json

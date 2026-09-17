@@ -29,17 +29,17 @@
     filterData = filterData.reduce((acumulador, current) => {
 
       let [mes, year] = current.periodo.split("/")
+      if (!year) year = mes
 
-      if (!year) year = current.periodo
-      acumulador[year] = {}
-
-      acumulador[year][mes] = current.cantidad
+      if (!acumulador[year]) acumulador[year] = []
+      if (mes === year) return acumulador
+      acumulador[year].push({ mes, cantidad: current.cantidad })
 
       return acumulador
 
     }, {})
 
-    await fs.writeFile('./resultado.json', JSON.stringify(filterData, null, 2))
+    await fs.writeFile('./parados-por-año.json', JSON.stringify(filterData, null, 2))
 
   } catch (error) {
     console.log(error)
