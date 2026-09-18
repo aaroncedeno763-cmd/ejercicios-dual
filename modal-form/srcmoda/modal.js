@@ -19,7 +19,6 @@ export default (() => {
     let caja = document.querySelector(".box");
     caja.classList.add("box-hidden");
 
-    alert("enviado");
   })
 
 

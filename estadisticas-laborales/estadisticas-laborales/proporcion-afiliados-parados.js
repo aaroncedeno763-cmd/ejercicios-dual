@@ -22,7 +22,7 @@
       let codigoPostal = element["Isla y municipio de residencia"].split(" ")[0]
       let periodo = element["Periodo"]
       let municipio = element["Isla y municipio de residencia"].split(" ").slice(1).join(" ")
-      let cantidad = element["valor"].replaceAll('.', '')
+      let cantidad = Number(element["valor"].replaceAll('.', ''))
       let sexo = element["Sexo"] === "Hombres" ? "M" : "F"
 
       if (municipio.includes("(")) {
@@ -42,7 +42,7 @@
         acumulador[codigoPostal][sexo][periodo] = []
       }
 
-      acumulador[codigoPostal][sexo][periodo].push({ municipio, cantidad })
+      acumulador[codigoPostal][sexo][periodo].push({ municipio, codigoPostal, periodo, sexo, cantidad })
 
       return acumulador
     }, {})
