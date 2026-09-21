@@ -1,0 +1,136 @@
+class Tarjeta extends HTMLElement {
+
+  constructor() {
+    super()
+    this.shadow = this.attachShadow({ mode: 'open' })
+  }
+
+  connectedCallback() {
+    this.render()
+  }
+
+  render() {
+    this.shadow.innerHTML =
+      /*html*/`
+    <style>
+    .tarjetas {
+  display: flex;
+  gap: 1.5rem;
+  padding: 3rem;
+  background-color: var(--papel);
+}
+
+.tarjeta {
+  flex: 1;
+  background-color: hsl(0, 0%, 100%);
+  border-top: 0.25rem solid var(--dorado);
+  padding: 2rem;
+  text-align: center;
+}
+
+.tarjeta-imagen svg {
+  width: 6rem;
+  height: 6rem;
+  fill: var(--granate);
+  margin-bottom: 1rem;
+}
+
+.titulo h2 {
+  color: var(--tinta);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta-descripcion p {
+  color: var(--tinta);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.tarjeta-boton button {
+  background-color: var(--granate);
+  color: var(--papel);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.tarjeta-boton button:hover {
+  background-color: var(--granate-oscuro);
+}
+    </style>
+
+    <section class="tarjetas">
+
+      <div class="tarjeta">
+        <div class="tarjeta-imagen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>reloj</title>
+            <path
+              d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+          </svg>
+        </div>
+        <div class="titulo">
+          <h2>Horarios de Entrenamiento</h2>
+        </div>
+        <div class="tarjeta-descripcion">
+          <p>Consulta los horarios de entrenamiento de nuestros equipos y categorías.</p>
+        </div>
+        <div class="tarjeta-boton">
+          <button>Ver horarios</button>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="tarjeta-imagen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>balon</title>
+            <path
+              d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4C13.24,4 14.4,4.34 15.4,4.92L14.3,7H9.7L8.6,4.92C9.6,4.34 10.76,4 12,4M6.5,6.36L7.94,8.94L6.5,11.5L4,10.94A9.94,9.94 0 0,1 6.5,6.36M20,10.94L17.5,11.5L16.06,8.94L17.5,6.36A9.94,9.94 0 0,1 20,10.94M8.4,13H15.6L17,17L13.9,19.16L12,17.9L10.1,19.16L7,17L8.4,13Z" />
+          </svg>
+        </div>
+        <div class="titulo">
+          <h2>Próximos Partidos</h2>
+        </div>
+        <div class="tarjeta-descripcion">
+          <p>Consulta los próximos partidos, rivales, horarios y campos donde jugarán nuestros equipos.</p>
+        </div>
+        <div class="tarjeta-boton">
+          <button>Ver partidos</button>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="tarjeta-imagen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>escudo</title>
+            <path
+              d="M12,2L4,5V11C4,16.55 7.84,21.74 12,23C16.16,21.74 20,16.55 20,11V5L12,2M12,4.2L18,6.45V11C18,15.67 15,19.72 12,20.9C9,19.72 6,15.67 6,11V6.45L12,4.2Z" />
+          </svg>
+        </div>
+        <div class="titulo">
+          <h2>Nuestros Equipos</h2>
+        </div>
+        <div class="tarjeta-descripcion">
+          <p>Conoce todas las categorías y equipos que forman parte del Collerense.</p>
+        </div>
+        <div class="tarjeta-boton">
+          <button>Ver equipos</button>
+        </div>
+      </div>
+
+    </section>
+    `
+
+    this.shadow.querySelector('.title').addEventListener('click', () => {
+      this.alertMessage()
+    })
+  }
+
+  alertMessage() {
+    alert(this.message)
+  }
+}
+
+customElements.define('tarjeta-component', Tarjeta);

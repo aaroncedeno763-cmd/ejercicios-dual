@@ -161,7 +161,7 @@ nav a:hover {
   border: 1px solid var(--papel);
 }
 
-.hero-imagen {
+.hero {
   position: relative;
   width: 100%;
   min-height: 87vh;

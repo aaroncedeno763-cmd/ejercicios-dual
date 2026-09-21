@@ -1,0 +1,5 @@
+import "./components/logo.js"
+import "./components/hero.js"
+import "./components/top-bar.js"
+import "./components/nav.js"
+import "./components/tarjeta.js"

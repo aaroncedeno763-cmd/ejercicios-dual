@@ -20,7 +20,8 @@
 
     filterData = filterData.filter(element =>{ 
       return element.sexo !== "_T" && 
-            element.municipio === "Illes Balears" 
+            element.municipio === "Illes Balears" &&
+            element.medidas === "Parados registrados"
     })
 
     filterData = filterData.reduce((years, element) =>{

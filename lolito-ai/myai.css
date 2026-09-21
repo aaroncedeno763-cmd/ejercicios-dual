@@ -185,9 +185,12 @@ main {
   align-items: center;
 }
 
+.contenedor {
+  width: 30%;
+}
 
 .caja-principal {
-  width: 70%;
+  width: 100%;
   text-align: center;
 }
 
@@ -239,23 +242,4 @@ main {
   color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 50%;
-}
-
-
-.opciones {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.6rem;
-  padding-top: 1.5rem;
-}
-
-
-.opciones button {
-  background-color: hsl(0, 0%, 9%);
-  color: hsl(0, 0%, 80%);
-  border: 1px solid hsl(0, 0%, 20%);
-  border-radius: 2rem;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
 }
