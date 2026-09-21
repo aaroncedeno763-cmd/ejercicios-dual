@@ -21,12 +21,13 @@ class Historial extends HTMLElement {
       .historial {
         color: hsla(0, 0%, 97%, 1.00);
         font-size: 1.3rem;
-        min-height: 70vh;
+        height: 100%;
       }
 
 
       .lista-chats {
-        height: 70vh;
+        flex: 1;
+        minheight: 0;
         overflow-y: auto;
       }
 

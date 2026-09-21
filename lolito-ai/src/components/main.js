@@ -19,6 +19,7 @@ class Main extends HTMLElement {
         width: 80%;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }

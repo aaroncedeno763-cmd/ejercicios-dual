@@ -28,7 +28,8 @@ class PromptInput extends HTMLElement {
 
 
       .promt-input input {
-        width: 100 %;
+        width: 100%;
+        min-width: 0;
         background-color: transparent;
         color: hsl(0, 0%, 100%);
         border: none;
