@@ -14,17 +14,18 @@ class Main extends HTMLElement {
       /*html*/`
     <style>
       main {
-        height: 100vh;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: space-between;
+        padding: 0 4rem;
+        max-height: 92vh;
+      
       }
     </style>
 
     <main>
-      <slot name="titulo"></slot>
-      <slot name="prompt"></slot>
+      <slot name="table"></slot>
+      <slot name="form"></slot>
     </main>
      `
   }

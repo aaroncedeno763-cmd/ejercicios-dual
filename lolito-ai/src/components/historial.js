@@ -18,16 +18,24 @@ class Historial extends HTMLElement {
         text-decoration: none;
       }
 
+      :host {
+        display: block;
+        height: 100%;
+      }
+
       .historial {
         color: hsla(0, 0%, 97%, 1.00);
         font-size: 1.3rem;
-        height: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
       }
 
 
       .lista-chats {
         flex: 1;
-        minheight: 0;
+        min-height: 0;
         overflow-y: auto;
       }
 
