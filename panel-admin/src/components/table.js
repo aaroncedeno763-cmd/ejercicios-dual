@@ -36,6 +36,10 @@ class Table extends HTMLElement {
           cursor: pointer;
         }
 
+        .paginacion button:hover{
+          background-color: hsla(200, 4%, 83%, 1.00);
+        }
+
         .paginacion span {
           padding: 0 1.5rem;
           height: 100%;
