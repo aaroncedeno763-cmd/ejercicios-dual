@@ -6,7 +6,19 @@ class Table extends HTMLElement {
   }
 
   connectedCallback() {
+    this.loadData()
     this.render()
+  }
+
+  loadData() {
+    this.data = [
+      {
+        nombre: "Aarón Cedeno",
+        email: "aaroncedeno123@hotmail.com",
+        fechaCreacion: "23/09/2026",
+        fechaActualizacion: "23/09/2026"
+      }
+    ]
   }
 
   render() {
@@ -20,7 +32,7 @@ class Table extends HTMLElement {
 
         .table {
           width: 130%;
-          padding: 0 0 0.1rem;
+          padding: 0;
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
@@ -80,13 +92,25 @@ class Table extends HTMLElement {
         </div>
 
         <ul>
-          <li><strong>Nombre:</strong> Aaron Cedeno</li>
-          <li><strong>Email:</strong> aaroncedeno0292@hotmail.com</li>
-          <li><strong>Fecha de creacion:</strong> 10/12/2023</li>
-          <li><strong>Fecha de actualizacion:</strong> 10/12/2023</li>
         </ul>
       </div>
       `
+
+
+    const ul = this.shadow.querySelector('ul')
+
+
+
+    this.data.forEach(element => {
+      const li = document.createElement('li')
+      li.innerHTML = `
+        <strong>Nombre:</strong> ${element.nombre}<br>
+        <strong>Email:</strong> ${element.email}<br>
+        <strong>Fecha de creacion:</strong> ${element.fechaCreacion}<br>
+        <strong>Fecha de actualizacion:</strong> ${element.fechaActualizacion}
+      `;
+      ul.appendChild(li);
+    });
   }
 }
 

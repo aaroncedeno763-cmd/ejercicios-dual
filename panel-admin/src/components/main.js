@@ -19,7 +19,6 @@ class Main extends HTMLElement {
         justify-content: space-between;
         padding: 1.5rem 4rem;
         max-height: 92vh;
-      
       }
     </style>
 
