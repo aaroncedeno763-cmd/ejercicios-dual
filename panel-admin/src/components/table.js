@@ -13,9 +13,17 @@ class Table extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
       <style>
-       .table {
-          width: 100%;
-          padding: 1rem 3rem;
+        
+        * {
+          box-sizing: border-box;
+        }
+
+        .table {
+          width: 130%;
+          padding: 0 0 0.1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
         }
 
         .paginacion {
@@ -23,7 +31,8 @@ class Table extends HTMLElement {
           justify-content: flex-end;
           align-items: center;
           height: 2.5rem;
-          padding: 0.5rem 0;
+          padding: 0;
+          border-bottom: 0.15rem solid hsl(200, 50%, 50%);
         }
 
         .paginacion button {
@@ -52,9 +61,9 @@ class Table extends HTMLElement {
         }
 
         ul {
-          margin:0;
+          margin: 0;
           border: 0.15rem solid hsl(200, 50%, 50%);
-          padding: 0 1rem;
+          padding: 1rem;
           list-style: none;
         }
 

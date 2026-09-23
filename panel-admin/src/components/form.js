@@ -13,6 +13,10 @@ class Form extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
       <style> 
+        
+        * {
+          box-sizing: border-box;
+        }
         .container{
           display: flex;
           width: 100%;
@@ -57,6 +61,7 @@ class Form extends HTMLElement {
         padding: 1rem;
         border-top: 0.15rem solid hsl(200, 50%, 50%);
         background-color: hsl(210, 30%, 95%);
+        height: 13vh;
        }
 
        .form div {

@@ -19,13 +19,12 @@ class Header extends HTMLElement {
         justify-content: space-between;
         background-color: hsl(200, 50%, 50%);
         height: 8vh;
-        padding: 0 3rem;
+        padding: 0 4rem;
       }
     </style>
 
     <header>
-      <slot name="logo"></slot>
-      <slot name="menu"></slot>
+      <slot></slot>
     </header>
      `
   }

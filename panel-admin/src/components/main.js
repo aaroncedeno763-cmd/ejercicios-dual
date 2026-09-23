@@ -15,17 +15,16 @@ class Main extends HTMLElement {
     <style>
       main {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
-        padding: 0 4rem;
+        padding: 1.5rem 4rem;
         max-height: 92vh;
       
       }
     </style>
 
     <main>
-      <slot name="table"></slot>
-      <slot name="form"></slot>
+      <slot></slot>
     </main>
      `
   }
