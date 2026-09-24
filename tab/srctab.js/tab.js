@@ -6,9 +6,6 @@ export default (() => {
   pestañas.forEach(pestaña => {
 
     pestaña.addEventListener("click", () => {
-
-      console.log(pestaña.dataset.tab);
-
       pestañas.forEach(pestaña => {
         pestaña.classList.remove("active");
       });
@@ -16,7 +13,6 @@ export default (() => {
       contenidos.forEach(contenido => {
         contenido.classList.remove("active");
       });
-
       pestaña.classList.add("active");
 
       const contenido = document.querySelectorAll(`.contenido-tab[data-content="${pestaña.dataset.tab}"]`);
