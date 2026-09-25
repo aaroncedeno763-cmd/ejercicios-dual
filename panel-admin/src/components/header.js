@@ -21,6 +21,14 @@ class Header extends HTMLElement {
         height: 8vh;
         padding: 0 4rem;
       }
+
+      @media (max-width: 450px) {
+        header{
+          width:100%;
+          height: auto;
+          padding: 0 0.5rem;
+        }
+      }
     </style>
 
     <header>

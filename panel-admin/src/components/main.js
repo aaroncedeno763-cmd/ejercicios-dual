@@ -20,6 +20,13 @@ class Main extends HTMLElement {
         padding: 1.5rem 4rem;
         max-height: 92vh;
       }
+
+      @media (max-width: 450px) {
+        main{
+          width: 100%;
+          padding: 0.2rem;
+        }
+      }
     </style>
 
     <main>

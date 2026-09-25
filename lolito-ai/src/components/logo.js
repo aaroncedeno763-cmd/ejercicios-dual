@@ -31,6 +31,17 @@ class Logo extends HTMLElement {
         font-size: 1.5rem;
       }
 
+      @media (max-width: 430px) {
+        .logo h1 {
+          font-size: 1.2rem;
+        }
+
+        .logo svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
     </style>
 
    <div class="logo">

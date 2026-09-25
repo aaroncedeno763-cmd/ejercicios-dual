@@ -39,10 +39,10 @@ class Menu extends HTMLElement {
           display: none;
           position: absolute;
           right: 0;
-          top: 3rem;
-          width: 14rem;
+          top: 4rem;
+          width: 15rem;
           padding: 0.7rem;
-          background-color: hsl(0, 0%, 20%);
+          background-color: hsl(200, 50%, 50%);
           border-radius: 1rem;
           flex-direction: column;
           gap: 0.5rem;
@@ -54,7 +54,7 @@ class Menu extends HTMLElement {
         }
 
         .desplegable a:hover {
-          background-color: hsl(0, 0%, 30%);
+          background-color: hsl(200, 50%, 70%);
         }
 
         .desplegable.mostrar {

@@ -26,12 +26,12 @@ class Nav extends HTMLElement {
       }
 
       nav a {
-        color: var(--papel);
+        color: hsl(40, 37%, 92%);
         text-decoration: none;
       }
 
       nav a:hover {
-        color: var(--dorado);
+        color: hsl(38, 54%, 54%);
       }
 
       .cuenta {
@@ -47,14 +47,14 @@ class Nav extends HTMLElement {
       }
 
       .registrate button {
-        background-color: var(--dorado);
-        color: var(--granate-oscuro);
+        background-color: hsl(38, 54%, 54%);
+        color: hsl(352, 63%, 18%);
       }
 
       .iniciar-sesion button {
         background-color: transparent;
-        color: var(--papel);
-        border: 1px solid var(--papel);
+        color: hsl(40, 37%, 92%);
+        border: 1px solid hsl(40, 37%, 92%);
       }
 
     </style>

@@ -31,17 +31,17 @@ class Header extends HTMLElement {
         align-items: center;
         gap: 1rem;
         padding: 0.5rem 3rem;
-        background-color: var(--granate-oscuro);
+        background-color: hsl(352, 63%, 18%);
       }
 
       header section a {
-        color: var(--papel);
+        color: hsl(40, 37%, 92%);
         text-decoration: none;
         font-size: 0.85rem;
       }
 
       header section a:hover {
-        color: var(--dorado);
+        color: hsl(38, 54%, 54%);
       }
 
       header section ul {

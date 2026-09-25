@@ -16,11 +16,25 @@ class MiCuenta extends HTMLElement {
       .mi-cuenta {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
+        width: max-content;
       }
 
       .mi-cuenta p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        margin: 0;
+      }
+
+      :host([cerrada]) .mi-cuenta p {
+        display: none;
+      }
+
+      .mi-cuenta svg {
+        width: 3rem;
+        height: 3rem;
+        display: block;
+        fill: hsl(0,0%,100%);
+        flex-shrink: 0;
       }
       
     </style>

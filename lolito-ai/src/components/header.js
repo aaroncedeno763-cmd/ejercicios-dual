@@ -21,13 +21,15 @@ class Header extends HTMLElement {
         padding: 0 2%;
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
         z-index: 1001;
       }
-    </style>
 
+     
+    </style>
+  
     <header>
-      <slot name="logo"></slot>
+      <slot></slot>
     </header>
      `
   }

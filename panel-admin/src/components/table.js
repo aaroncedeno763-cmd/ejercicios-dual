@@ -14,7 +14,7 @@ class Table extends HTMLElement {
     this.data = [
       {
         nombre: "Aarón Cedeno",
-        email: "aaroncedeno123@hotmail.com",
+        email: "aaroncedeno123@gmail.com",
         fechaCreacion: "23/09/2026",
         fechaActualizacion: "23/09/2026"
       }
@@ -81,6 +81,37 @@ class Table extends HTMLElement {
 
         li {
           padding: 0.2rem 0;
+        }
+
+        @media (max-width: 450px) {
+          .table{
+            width: 90%;
+          }
+
+          .paginacion{
+            flex-direction: row;
+            justify-content: flex-end;
+            height: 3.7vh;
+          }
+
+          .paginacion span {
+            font-size: 1rem;
+            height: 3.5vh;
+            padding: 0 1rem;
+          }
+          
+          .paginacion button{
+            height: 3.5vh;
+            width: 1.5rem;
+          }
+
+          ul {
+            padding: 0.5rem;
+          }
+
+          li {
+            padding: 0.1rem 0;
+          }
         }
       </style>
 

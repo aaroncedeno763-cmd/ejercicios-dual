@@ -1,40 +1,45 @@
-console.log("JS CARGADO")
 class BarraLateral extends HTMLElement {
 
   constructor() {
     super()
-    console.log("CONSTRUCTOR")
     this.shadow = this.attachShadow({ mode: 'open' })
   }
 
   connectedCallback() {
-    console.log("COMPONENTE CARGADO")
     this.render()
     this.eventos()
   }
 
   render() {
-    console.log("RENDER")
     this.shadow.innerHTML =
       /*html*/`
       <style>
        .botones {
+          box-sizing: border-box;
           background-color: hsl(0, 3%, 13%);
           width: 20%;
           height: 100vh;
           position: fixed;
           left: 0;
           top: 0;
-          padding: 8vh 2%;
+          padding: 5vh 2% 2vh;
           display: flex;
           flex-direction: column;
           z-index: 1000;
-          transition: transform 0.5s ease;
+          transition: width 0.5s ease;
         }
 
 
-        .botones--cerrar {
-          transform: translateX(-90%) !important;
+        .botones-cerrar {
+          width: 3.25rem;
+          transform: none !important;
+          padding: 5vh 0.5rem 2vh;
+        }
+
+        .botones-cerrar .boton-nuevo-chat {
+          justify-content: center;
+          font-size: 0;
+          padding: 0.5rem 0;
         }
 
         .botones svg {
@@ -48,7 +53,7 @@ class BarraLateral extends HTMLElement {
           border: none;
           position: absolute;
           right: 4rem;
-          top: 4%;
+          top: 2.5%;
           width: 2rem;
           height: 2rem;
           cursor: pointer;
@@ -61,7 +66,7 @@ class BarraLateral extends HTMLElement {
           border: none;
           position: absolute;
           right: 0.1rem;
-          top: 4%;
+          top: 2.5%;
           width: 2rem;
           height: 2rem;
           cursor: pointer;
@@ -87,24 +92,71 @@ class BarraLateral extends HTMLElement {
           display: flex;
           align-items: center;
           gap: 0.5rem;
+          cursor: pointer;
         }
 
-        slot[name="historial"] {
-          flex: 1;
-          min-height: 0;
-          overflow: hidden;
+        .botones-cerrar .boton-cerrar {
+          right: 0.6rem;
+          top: 2.5%;
         }
 
-        slot[name="mi-cuenta"] {
-          flex: 0 0 auto;
+        .botones-cerrar .nuevo-chat {
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          top: 6%;
+          left: 0;
+          width: 100%;
         }
+
+        .botones-cerrar .boton-nuevo-chat {
+          width: 2rem;
+          margin: 0 auto;
+          padding: 0.5rem 0;
+          justify-content: center;
+          font-size: 0;
+        }
+
+        .botones-cerrar .boton-busqueda {
+          right: 0.6rem;
+          top: 12%;
+        }
+
+       .botones-cerrar .contenido {
+          visibility: hidden;
+        } 
+
+
+       .contenido {
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+      }
+
+      .cuenta {
+        flex-shrink: 0;
+      }
+
+       @media (max-width: 430px) {
+        .botones {
+          padding: 12vh 2% 2vh;
+        }
+
+        .boton-busqueda {
+          right: 0;
+          top: 6%;
+        }
+        
+        .boton-cerrar {
+          top: 6%;
+        }
+        
+      }
   
       </style>
 
       <div class="botones">
-        <button class="boton-cerrar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
-          </svg></button>
+        <button class="boton-cerrar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg></button>
         <button class="boton-busqueda"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>magnify</title>
             <path
@@ -117,19 +169,23 @@ class BarraLateral extends HTMLElement {
             </svg>Nuevo chat</button>
         </div>
 
-        <slot name="historial"></slot>
-        <slot name="mi-cuenta"></slot>
+        <div class="contenido">
+          <slot name="historial"></slot>
+        </div>
+
+        <div class="cuenta">
+          <slot name="cuenta"></slot>
+        </div>
       </div>
       `
   }
   eventos() {
-    console.log("EVENTOS EJECUTADOS")
     const botonCerrar = this.shadow.querySelector(".boton-cerrar");
+    const cuenta = this.querySelector('[slot="cuenta"]')
     const barraLateral = this.shadow.querySelector(".botones");
-    console.log(barraLateral)
-    console.log(botonCerrar)
     botonCerrar.addEventListener('click', () => {
-      barraLateral.classList.toggle("botones--cerrar")
+      barraLateral.classList.toggle("botones-cerrar")
+      cuenta.toggleAttribute("cerrada")
     })
   }
 }

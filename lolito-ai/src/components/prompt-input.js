@@ -16,7 +16,7 @@ class PromptInput extends HTMLElement {
 
 
       .promt-input {
-        width: 100%;
+        width: 45vw;
         height: 7vh;
         background-color: hsl(0, 0%, 14%);
         border-radius: 2rem;
@@ -46,6 +46,11 @@ class PromptInput extends HTMLElement {
           border: none;
           border-radius: 50%;
           font-size: 1.2rem;
+          cursor: pointer;
+        }
+
+        .boton-mas:hover{
+          background-color: hsl(0, 0%, 30%);
         }
 
 
@@ -56,6 +61,11 @@ class PromptInput extends HTMLElement {
           color: hsl(0, 0%, 100%);
           border: none;
           border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .boton-enviar:hover{
+          background-color: hsl(214, 46%, 40%);
         }
 
     </style>

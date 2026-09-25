@@ -19,12 +19,13 @@ class Main extends HTMLElement {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-left: 15rem;
       }
+     
     </style>
 
     <main>
-      <slot name="titulo"></slot>
-      <slot name="prompt"></slot>
+      <slot></slot>
     </main>
      `
   }

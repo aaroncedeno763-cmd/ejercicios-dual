@@ -27,10 +27,12 @@ class Form extends HTMLElement {
          background-color: hsl(200, 50%, 50%);
          width: 10%;
          height: 2.5rem;
+         padding: 0 1rem;
          display: flex;
          align-items: center;
          justify-content: center;
-         font-size: 1.5rem;
+         font-size: 1.5rem;         
+         cursor: pointer;
         }
 
         .general:hover{
@@ -79,7 +81,39 @@ class Form extends HTMLElement {
         padding-top: 0.5rem;
         height: 1.5rem;
        }
+       
 
+       @media (max-width: 450px) {
+        .container {
+          width: 95%;
+        }
+
+        .general{
+          height: 3.5vh;
+          width: 50%;
+          font-size: 1.5rem;
+        }
+
+        .botones{
+          width: 50%;
+        }
+
+        .botones button{
+          width: 3.5vh;
+          height: 3.5vh;
+        }
+
+        .form{
+          width: 95%;
+          flex-direction: column;
+          height: auto;
+          justify-content: space-between;
+        }
+
+        .form div{
+          width: 100%;
+        }
+       }
       </style>
 
       <div class="container">

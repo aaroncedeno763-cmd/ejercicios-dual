@@ -55,16 +55,14 @@ class Hero extends HTMLElement {
         z-index: 2;
       }
 
-      .hero-escudo {
-        max-width: 160px;
-        height: auto;
-        margin-bottom: 1.5rem;
-        filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4));
-        transition: transform 0.3s ease;
-      }
-
-      .hero-escudo:hover {
-        transform: scale(1.05);
+      .hero-titulo h3 {
+        font-family: 'Arial', sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        margin: 0 0 1rem 0;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.5);
       }
 
       .hero-titulo h2 {
@@ -103,7 +101,7 @@ class Hero extends HTMLElement {
       }
 
       .hero-boton button:hover {
-        background-color: hsl(38, 54%, 54%);
+        background-color: hsl(48, 100%, 50%);
         color: hsl(347, 70%, 17%);
         box-shadow: 0 0 20px hsl(38, 54%, 54%);
       }

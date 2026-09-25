@@ -123,8 +123,7 @@ class Historial extends HTMLElement {
 
       :host {
         display: block;
-        flex: 1;
-        min-height: 0;
+        height: 100%;
       }
 
       .historial {
@@ -169,6 +168,13 @@ class Historial extends HTMLElement {
         overflow: hidden;
         text-overflow: ellipsis;
         position: relative;
+        cursor: pointer;
+        padding: 0.5rem 0.5rem;
+        border-radius: 0.5rem;
+      }
+
+      .historial li:hover{
+        background-color: hsl(0, 0%, 39%);
       }
 
     </style>

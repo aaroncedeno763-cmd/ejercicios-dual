@@ -13,43 +13,48 @@ class Tarjeta extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
     <style>
-    .tarjetas {
+      .tarjetas {
         display: flex;
         gap: 1.5rem;
         padding: 3rem;
-        background-color: var(--papel);
+        background-color: hsl(40,37%,92%);
       }
 
       .tarjeta {
         flex: 1;
-        background-color: hsl(0, 0%, 100%);
-        border-top: 0.25rem solid var(--dorado);
+        background-color: hsl(0,0%,100%);
+        border-top: 0.25rem solid hsl(38,54%,54%);
         padding: 2rem;
         text-align: center;
+      }
+
+      .tarjeta:hover {
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
       }
 
       .tarjeta-imagen svg {
         width: 6rem;
         height: 6rem;
-        fill: var(--granate);
+        fill: hsl(351,61%,26%);
         margin-bottom: 1rem;
       }
 
       .titulo h2 {
-        color: var(--tinta);
+        color: hsl(22,20%,11%);
         font-size: 1.2rem;
         margin-bottom: 0.8rem;
       }
 
       .tarjeta-descripcion p {
-        color: var(--tinta);
+        color: hsl(22,20%,11%);
         font-size: 0.95rem;
         margin-bottom: 1.2rem;
       }
 
       .tarjeta-boton button {
-        background-color: var(--granate);
-        color: var(--papel);
+        background-color: hsl(351,61%,26%);
+        color: hsl(40,37%,92%);
         border: none;
         padding: 0.6rem 1.2rem;
         border-radius: 0.25rem;
@@ -57,7 +62,10 @@ class Tarjeta extends HTMLElement {
       }
 
       .tarjeta-boton button:hover {
-        background-color: var(--granate-oscuro);
+        background-color: hsla(348, 64%, 35%, 1.00);
+        transform: translateY(-5px);
+        transition: all 0.5s ease;
+        box-shadow: 0 5px 15px hsla(348, 64%, 35%, 1.00);
       }
     </style>
 
