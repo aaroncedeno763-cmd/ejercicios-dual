@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="tab.css" rel="stylesheet">
+  <script type="module" src="./srctab.js/index.js"></script>
+
+</head>
+
+<body>
+
+  <div class="pestañas">
+    <button class="pestaña descripcion" data-tab="descripcion">descripcion</button>
+    <button class="pestaña informacion" data-tab="informacion">informacion</button>
+    <button class="pestaña financiacion" data-tab="financiacion">financiacion</button>
+  </div>
+
+  <div class="contenido">
+    <div class="contenido-tab descripcion" data-content="descripcion">
+      <h2>Descripción</h2>
+      <p>Aquí aparecerá la descripción del producto.</p>
+    </div>
+
+    <div class="contenido-tab informacion" data-content="informacion">
+      <h2>Información</h2>
+      <p>Aquí aparecerá toda la información del producto.</p>
+    </div>
+
+    <div class="contenido-tab financiacion" data-content="financiacion">
+      <h2>Financiación</h2>
+      <p>Aquí aparecerá la información sobre las opciones de financiación.</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
