@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsl(0, 0%, 100%);
+}
+
+.numero::-webkit-inner-spin-button,
+.numero::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contador {
+  width: 20rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(180, 100%, 50%);
+}
+
+.botonMenos,
+.botonMas {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 10%);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.numero {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 10%);
+  font-size: 2rem;
+  text-align: center;
+}
