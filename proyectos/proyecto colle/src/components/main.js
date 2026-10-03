@@ -13,15 +13,7 @@ class Main extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
     <style>
-      main {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-left: 15rem;
-      }
-     
+    
     </style>
 
     <main>

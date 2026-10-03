@@ -14,7 +14,12 @@ class Header extends HTMLElement {
       /*html*/`
     <style>
       header {
+<<<<<<< HEAD
         width: 100%;
+=======
+        width:100%;
+        box-sizing: border-box;
+>>>>>>> 50184bc963bfcd3b8356b35a13f4d2c82001ac28
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -49,6 +54,43 @@ class Header extends HTMLElement {
         display: flex;
         list-style: none;
         gap: 1.5rem;
+      }
+      @media (max-width:1150px) {
+        header {
+          padding:0.5rem 2rem;
+        }
+
+        header section {
+          padding:0.5rem 2rem;
+        }
+      }
+      @media (max-width: 900px) {
+        header {
+          padding: 0.5rem 1.5rem;
+        }
+        header section {
+          padding: 0.5rem 1.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 0.5rem 1rem;
+        }
+        header section {
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      @media (max-width:600px) {
+        header {
+          flex-wrap:wrap;
+          padding:0.5rem 1rem;
+        }
+
+        header section {
+          padding:0.5rem 1rem;
+        }
       }
     </style>
 

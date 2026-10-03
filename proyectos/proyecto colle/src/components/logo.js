@@ -38,6 +38,78 @@ class Logo extends HTMLElement {
         font-weight: 300;
         text-align: center;
       }
+
+      @media (max-width:1150px) {
+        .logo-escudo {
+          width:4.5rem;
+          height:4.5rem;
+        }
+
+        .title h1 {
+          font-size:1.8rem;
+        }
+
+        .title p {
+          font-size:0.75rem;
+        }
+      }
+
+      @media (max-width:900px) {
+        .logo {
+          gap:0.4rem;
+        }
+
+        .logo-escudo {
+          width:4rem;
+          height:4rem;
+        }
+
+        .title h1 {
+          font-size:1.5rem;
+        }
+
+        .title p {
+          font-size:0.7rem;
+        }
+      }
+
+      @media (max-width:768px) {
+        .logo {
+          gap:0.3rem;
+        }
+
+        .logo-escudo {
+          width:3.5rem;
+          height:3.5rem;
+        }
+
+        .title h1 {
+          font-size:1.2rem;
+        }
+
+        .title p {
+          font-size:0.6rem;
+        }
+      }
+
+      @media (max-width:600px) {
+        .logo {
+          gap:0.25rem;
+        }
+
+        .logo-escudo {
+          width:3.5rem;
+          height:3.5rem;
+        }
+
+        .title h1 {
+          font-size:1.1rem;
+        }
+
+        .title p {
+          font-size:0.6rem;
+        }
+      }
     </style>
 
     <div class="logo">

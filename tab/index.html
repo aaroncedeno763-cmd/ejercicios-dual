@@ -12,29 +12,30 @@
 
 <body>
 
-  <div class="pestañas">
-    <button class="pestaña descripcion" data-tab="descripcion">descripcion</button>
-    <button class="pestaña informacion" data-tab="informacion">informacion</button>
-    <button class="pestaña financiacion" data-tab="financiacion">financiacion</button>
+  <div class="specifications">
+    <div class="pestañas">
+      <button class="pestaña descripcion active" data-tab="descripcion">descripcion</button>
+      <button class="pestaña informacion" data-tab="informacion">informacion</button>
+      <button class="pestaña financiacion" data-tab="financiacion">financiacion</button>
+    </div>
+
+    <div class="contenido">
+      <div class="contenido-tab descripcion active" data-content="descripcion">
+        <h2>Descripción</h2>
+        <p>Aquí aparecerá la descripción del producto.</p>
+      </div>
+
+      <div class="contenido-tab informacion" data-content="informacion">
+        <h2>Información</h2>
+        <p>Aquí aparecerá toda la información del producto.</p>
+      </div>
+
+      <div class="contenido-tab financiacion" data-content="financiacion">
+        <h2>Financiación</h2>
+        <p>Aquí aparecerá la información sobre las opciones de financiación.</p>
+      </div>
+    </div>
   </div>
-
-  <div class="contenido">
-    <div class="contenido-tab descripcion" data-content="descripcion">
-      <h2>Descripción</h2>
-      <p>Aquí aparecerá la descripción del producto.</p>
-    </div>
-
-    <div class="contenido-tab informacion" data-content="informacion">
-      <h2>Información</h2>
-      <p>Aquí aparecerá toda la información del producto.</p>
-    </div>
-
-    <div class="contenido-tab financiacion" data-content="financiacion">
-      <h2>Financiación</h2>
-      <p>Aquí aparecerá la información sobre las opciones de financiación.</p>
-    </div>
-  </div>
-
 </body>
 
 </html>

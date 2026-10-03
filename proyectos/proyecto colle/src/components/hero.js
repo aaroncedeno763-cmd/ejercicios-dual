@@ -105,6 +105,51 @@ class Hero extends HTMLElement {
         color: hsl(347, 70%, 17%);
         box-shadow: 0 0 20px hsl(38, 54%, 54%);
       }
+
+      @media (max-width: 1150px) {
+        .hero-titulo h2 {
+          font-size: 2rem;
+        }
+        .hero-titulo h3 {
+          font-size: 0.8rem;
+        }
+        .hero-descripcion p {
+          font-size: 1rem;
+        }
+        .hero-boton button {
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero-titulo h2 {
+          font-size: 1.5rem;
+        }
+        .hero-titulo h3 {
+          font-size: 0.7rem;
+        }
+        .hero-descripcion p {
+          font-size: 0.9rem;
+        }
+        .hero-boton button {
+          font-size: 0.7rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-titulo h2 {
+          font-size: 1rem;
+        }
+        .hero-titulo h3 {
+          font-size: 0.6rem;
+        }
+        .hero-descripcion p {
+          font-size: 0.8rem;
+        }
+        .hero-boton button {
+          font-size: 0.6rem;
+        }
+      }
     </style>
 
     <section class="hero">
