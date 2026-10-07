@@ -23,13 +23,7 @@ class Nav extends HTMLElement {
       ul { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem 1rem; list-style: none; margin: 0; padding: 0; }
       a { display: inline-block; color: #e8edf7; text-decoration: none; font-size: .85rem; font-weight: 600; padding: .65rem 0; transition: color .2s; }
       a:hover { color: var(--dorado); }
-      .cuenta { display: flex; flex-shrink: 0; gap: .6rem; }
-      button { min-height: 44px; padding: .65rem 1rem; border-radius: 6px; font-size: .8rem; font-weight: 700; border: 1px solid #ffffff40; transition: background .2s; }
-      .registrate button { background: var(--rojo); color: white; border-color: var(--rojo); }
-      .registrate button:hover { background: #b72236; }
-      .iniciar-sesion button { background: transparent; color: white; }
-      .iniciar-sesion button:hover { background: #ffffff12; }
-      @media (max-width: 680px) { nav { align-items: stretch; flex-direction: column; gap: .8rem; } ul { gap: .2rem 1rem; } a { font-size: .875rem; } .cuenta { padding-top: .75rem; border-top: 1px solid #ffffff20; } }
+      @media (max-width: 680px) { nav { align-items: stretch; flex-direction: column; gap: .8rem; } ul { gap: .2rem 1rem; } a { font-size: .875rem; } }
     </style>
 
    <nav aria-label="Navegación principal">
@@ -43,10 +37,6 @@ class Nav extends HTMLElement {
         <li><a href="#entrenadores">Entrenadores</a></li>
       </ul>
 
-      <div class="cuenta">
-        <div class="registrate"><button>Regístrate</button></div>
-        <div class="iniciar-sesion"><button>Iniciar sesión</button></div>
-      </div>
     </nav>
     `
   }
