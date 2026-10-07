@@ -42,7 +42,7 @@ class Hero extends HTMLElement {
       <div class="hero-llamada-a-la-accion">
         <div class="hero-titulo">
           <h3>DESDE 1967</h3>
-          <h2>ORGULL DEL COLL D'EN REBASSA</h2>
+          <h2>ORGULL DEL COLL D'EN RABASSA</h2>
         </div>
         <div class="hero-descripcion">
           <p>Más que un club, una familia. Hazte socio y vive el Collerense desde dentro.</p>
