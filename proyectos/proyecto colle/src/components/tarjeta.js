@@ -21,10 +21,12 @@ class Tarjeta extends HTMLElement {
 
       :host { background: var(--papel); }
       .tarjetas { max-width: 1440px; margin: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; padding: 4rem clamp(1rem, 4vw, 4rem); }
-      .tarjeta { display: flex; flex-direction: column; align-items: flex-start; background: white; border: 1px solid #e2e5ea; border-radius: 12px; padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: 0 4px 18px #10203c05; transition: transform .2s, box-shadow .2s; }
+      .tarjeta { display: flex; flex-direction: column; align-items: flex-start; background: white; border: 1px solid #e2e5ea; border-top: 3px solid var(--acento, #223b7d); border-radius: 12px; padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: 0 4px 18px #10203c05; transition: transform .2s, box-shadow .2s; }
+      .tarjeta:nth-child(2) { --acento: var(--rojo); }
+      .tarjeta:nth-child(3) { --acento: #a66b12; }
       .tarjeta:hover { transform: translateY(-4px); box-shadow: 0 12px 30px #10203c12; }
-      .tarjeta-imagen { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 12px; background: #d832450c; margin-bottom: 1.5rem; }
-      svg { width: 30px; height: 30px; fill: var(--rojo); }
+      .tarjeta-imagen { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 12px; background: #f5f6f8; margin: 0 auto 1.5rem; }
+      svg { width: 30px; height: 30px; fill: var(--acento, #223b7d); }
       h2 { margin: 0 0 .8rem; color: var(--azul); font-size: 1.4rem; letter-spacing: -.025em; }
       .tarjeta-descripcion { flex: 1; }
       p { color: #526078; font-size: .95rem; line-height: 1.7; margin: 0 0 1.5rem; }

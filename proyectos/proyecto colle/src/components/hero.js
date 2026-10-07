@@ -21,8 +21,8 @@ class Hero extends HTMLElement {
 
       .hero { position: relative; isolation: isolate; overflow: hidden; min-height: 620px; display: flex; align-items: center; background: var(--azul); color: white; }
       .hero-fondo-campo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: .4; }
-      .hero-overlay { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #101f3cf2 0%, #101f3cc9 55%, #101f3c66 100%); }
-      .hero::after { content: ''; position: absolute; width: 400px; height: 400px; right: -190px; bottom: -210px; border: 55px solid #d8324540; border-radius: 50%; z-index: -1; }
+      .hero-overlay { position: absolute; inset: 0; z-index: -2; background: linear-gradient(110deg, #14264df2 0%, #352346e6 50%, #751d2ad9 100%); }
+      .hero::after { content: ''; position: absolute; width: 400px; height: 400px; right: -190px; bottom: -210px; border: 55px solid #efbd6940; border-radius: 50%; z-index: -1; }
       .hero-llamada-a-la-accion { width: 100%; max-width: 1440px; margin: auto; padding: 5rem clamp(1rem, 4vw, 4rem); }
       .hero-titulo h3 { display: inline-flex; align-items: center; gap: .7rem; margin: 0 0 1.75rem; color: var(--dorado); font-size: .8rem; font-weight: 700; letter-spacing: .22em; }
       .hero-titulo h3::before { content: ''; width: 2rem; height: 2px; background: currentColor; }
@@ -30,7 +30,7 @@ class Hero extends HTMLElement {
       .hero-descripcion p { max-width: 500px; margin: 1.75rem 0 2rem; color: #d9e1ef; font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.75; }
       .hero-boton button { min-height: 50px; padding: .9rem 1.5rem; border: none; border-radius: 6px; background: var(--rojo); color: white; font-weight: 700; box-shadow: 0 8px 24px #0003; transition: background .2s, transform .2s; }
       .hero-boton button:hover { background: #b72236; transform: translateY(-2px); }
-      @media (max-width: 680px) { .hero { min-height: 520px; } .hero-llamada-a-la-accion { padding-top: 3.5rem; padding-bottom: 4rem; } .hero-overlay { background: linear-gradient(90deg, #101f3cf2, #101f3cc9); } }
+      @media (max-width: 680px) { .hero { min-height: 520px; } .hero-llamada-a-la-accion { padding-top: 3.5rem; padding-bottom: 4rem; } .hero-overlay { background: linear-gradient(135deg, #14264df2, #751d2ae6); } }
       @media (prefers-reduced-motion: reduce) { button { transition: none !important; transform: none !important; } }
     </style>
 
