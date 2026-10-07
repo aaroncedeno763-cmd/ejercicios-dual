@@ -13,60 +13,25 @@ class Tarjeta extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
     <style>
-      .tarjetas {
-        display: flex;
-        gap: 1.5rem;
-        padding: 3rem;
-        background-color: hsl(40,37%,92%);
-      }
+      :host { display: block; }
+      *, *::before, *::after { box-sizing: border-box; }
+      a, button { -webkit-tap-highlight-color: transparent; }
+      button { font: inherit; cursor: pointer; }
+      a:focus-visible, button:focus-visible { outline: 3px solid #efbd69; outline-offset: 5px; }
 
-      .tarjeta {
-        flex: 1;
-        background-color: hsl(0,0%,100%);
-        border-top: 0.25rem solid hsl(38,54%,54%);
-        padding: 2rem;
-        text-align: center;
-      }
-
-      .tarjeta:hover {
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-      }
-
-      .tarjeta-imagen svg {
-        width: 6rem;
-        height: 6rem;
-        fill: hsl(351,61%,26%);
-        margin-bottom: 1rem;
-      }
-
-      .titulo h2 {
-        color: hsl(22,20%,11%);
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
-      }
-
-      .tarjeta-descripcion p {
-        color: hsl(22,20%,11%);
-        font-size: 0.95rem;
-        margin-bottom: 1.2rem;
-      }
-
-      .tarjeta-boton button {
-        background-color: hsl(351,61%,26%);
-        color: hsl(40,37%,92%);
-        border: none;
-        padding: 0.6rem 1.2rem;
-        border-radius: 0.25rem;
-        cursor: pointer;
-      }
-
-      .tarjeta-boton button:hover {
-        background-color: hsla(348, 64%, 35%, 1.00);
-        transform: translateY(-5px);
-        transition: all 0.5s ease;
-        box-shadow: 0 5px 15px hsla(348, 64%, 35%, 1.00);
-      }
+      :host { background: var(--papel); }
+      .tarjetas { max-width: 1440px; margin: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; padding: 4rem clamp(1rem, 4vw, 4rem); }
+      .tarjeta { display: flex; flex-direction: column; align-items: flex-start; background: white; border: 1px solid #e2e5ea; border-radius: 12px; padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: 0 4px 18px #10203c05; transition: transform .2s, box-shadow .2s; }
+      .tarjeta:hover { transform: translateY(-4px); box-shadow: 0 12px 30px #10203c12; }
+      .tarjeta-imagen { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 12px; background: #d832450c; margin-bottom: 1.5rem; }
+      svg { width: 30px; height: 30px; fill: var(--rojo); }
+      h2 { margin: 0 0 .8rem; color: var(--azul); font-size: 1.4rem; letter-spacing: -.025em; }
+      .tarjeta-descripcion { flex: 1; }
+      p { color: #526078; font-size: .95rem; line-height: 1.7; margin: 0 0 1.5rem; }
+      button { min-height: 44px; padding: .65rem 1rem; background: #f0f3f8; color: var(--azul); border: 1px solid #e2e5ea; border-radius: 6px; font-size: .875rem; font-weight: 700; transition: background .2s; }
+      button:hover { background: #e1e8f3; }
+      @media (max-width: 760px) { .tarjetas { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 2rem; gap: 1rem; } }
+      @media (prefers-reduced-motion: reduce) { .tarjeta { transition: none; } .tarjeta:hover { transform: none; } }
     </style>
 
     <section class="tarjetas">

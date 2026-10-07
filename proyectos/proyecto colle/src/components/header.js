@@ -13,81 +13,16 @@ class Header extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
     <style>
-      header {
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 3rem;
-        background: linear-gradient(45deg, #223b7d 0%, #e52421 100%);
-        position: sticky;
-        z-index: 10;
-        top: 0;
-        left: 0;
-      }
+      :host { display: block; }
+      *, *::before, *::after { box-sizing: border-box; }
+      a, button { -webkit-tap-highlight-color: transparent; }
+      button { font: inherit; cursor: pointer; }
+      a:focus-visible, button:focus-visible { outline: 3px solid #efbd69; outline-offset: 5px; }
 
-      header section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        padding: 0.5rem 3rem;
-        background-color: hsl(352, 63%, 18%);
-      }
-
-      header section a {
-        color: hsl(40, 37%, 92%);
-        text-decoration: none;
-        font-size: 0.85rem;
-      }
-
-      header section a:hover {
-        color: hsl(38, 54%, 54%);
-      }
-
-      header section ul {
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-      }
-      @media (max-width:1150px) {
-        header {
-          padding:0.5rem 2rem;
-        }
-
-        header section {
-          padding:0.5rem 2rem;
-        }
-      }
-      @media (max-width: 900px) {
-        header {
-          padding: 0.5rem 1.5rem;
-        }
-        header section {
-          padding: 0.5rem 1.5rem;
-        }
-      }
-
-      @media (max-width: 768px) {
-        header {
-          padding: 0.5rem 1rem;
-        }
-        header section {
-          padding: 0.5rem 1rem;
-        }
-      }
-
-      @media (max-width:600px) {
-        header {
-          flex-wrap:wrap;
-          padding:0.5rem 1rem;
-        }
-
-        header section {
-          padding:0.5rem 1rem;
-        }
-      }
+      :host { position: relative; z-index: 10; background: var(--azul); border-bottom: 1px solid #ffffff20; }
+      header { max-width: 1440px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.25rem clamp(1rem, 4vw, 4rem); }
+      ::slotted(nav-component) { min-width: 0; }
+      @media (max-width: 1180px) { header { flex-direction: column; align-items: stretch; gap: 1.25rem; } }
     </style>
 
     <header>
