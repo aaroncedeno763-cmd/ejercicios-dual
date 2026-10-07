@@ -48,12 +48,15 @@ class Hero extends HTMLElement {
           <p>Más que un club, una familia. Hazte socio y vive el Collerense desde dentro.</p>
         </div>
         <div class="hero-boton">
-          <button>Únete al club</button>
+          <button type="button" aria-haspopup="dialog">Únete al club</button>
         </div>
       </div>
     </section>
     `
 
+    this.shadow.querySelector('.hero-boton button').addEventListener('click', () => {
+      this.dispatchEvent(new CustomEvent('club-join', { bubbles: true, composed: true }))
+    })
   }
 }
 
