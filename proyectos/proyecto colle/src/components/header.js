@@ -14,12 +14,8 @@ class Header extends HTMLElement {
       /*html*/`
     <style>
       header {
-<<<<<<< HEAD
         width: 100%;
-=======
-        width:100%;
         box-sizing: border-box;
->>>>>>> 50184bc963bfcd3b8356b35a13f4d2c82001ac28
         display: flex;
         justify-content: space-between;
         align-items: center;
