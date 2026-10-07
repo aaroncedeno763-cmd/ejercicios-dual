@@ -36,8 +36,6 @@ class Nav extends HTMLElement {
         <li><a href="./furbo.html#partidos">Partidos</a></li>
         <li><a href="./furbo.html#noticias">Noticias</a></li>
         <li><a href="./furbo.html#entrenadores">Entrenadores</a></li>
-        <li><a href="./colaboradores.html">Colaboradores</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
       </ul>
 
     </nav>
