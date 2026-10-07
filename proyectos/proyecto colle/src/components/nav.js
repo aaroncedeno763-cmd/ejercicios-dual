@@ -22,23 +22,32 @@ class Nav extends HTMLElement {
       nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
       ul { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem 1rem; list-style: none; margin: 0; padding: 0; }
       a { display: inline-block; color: #e8edf7; text-decoration: none; font-size: .85rem; font-weight: 600; padding: .65rem 0; transition: color .2s; }
+      a[aria-current="page"] { color: var(--dorado); text-decoration: underline; text-underline-offset: 6px; }
       a:hover { color: var(--dorado); }
       @media (max-width: 680px) { nav { align-items: stretch; flex-direction: column; gap: .8rem; } ul { gap: .2rem 1rem; } a { font-size: .875rem; } }
     </style>
 
    <nav aria-label="Navegación principal">
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#club">El Club</a></li>
-        <li><a href="#categorias">Categorías</a></li>
-        <li><a href="#horarios">Horarios</a></li>
-        <li><a href="#partidos">Partidos</a></li>
-        <li><a href="#noticias">Noticias</a></li>
-        <li><a href="#entrenadores">Entrenadores</a></li>
+        <li><a href="./furbo.html#inicio">Inicio</a></li>
+        <li><a href="./furbo.html#club">El Club</a></li>
+        <li><a href="./furbo.html#categorias">Categorías</a></li>
+        <li><a href="./furbo.html#horarios">Horarios</a></li>
+        <li><a href="./furbo.html#partidos">Partidos</a></li>
+        <li><a href="./furbo.html#noticias">Noticias</a></li>
+        <li><a href="./furbo.html#entrenadores">Entrenadores</a></li>
+        <li><a href="./colaboradores.html">Colaboradores</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
       </ul>
 
     </nav>
     `
+    this.shadow.querySelectorAll('a').forEach(link => {
+      const target = new URL(link.href)
+      if (!target.hash && target.pathname === window.location.pathname) {
+        link.setAttribute('aria-current', 'page')
+      }
+    })
   }
 }
 

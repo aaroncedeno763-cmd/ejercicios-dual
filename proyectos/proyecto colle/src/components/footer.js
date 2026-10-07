@@ -65,7 +65,7 @@ class Footer extends HTMLElement {
   <footer class="club-footer">
     <div class="footer-content">
       <div class="footer-brand">
-        <a class="footer-logo" href="#inicio" aria-label="Collerense, volver al inicio">
+        <a class="footer-logo" href="./furbo.html" aria-label="Collerense, volver al inicio">
           <img src="imagenes/logo.png" alt="" width="64" height="76" loading="lazy">
           <span><span class="footer-eyebrow">Club de Fútbol · Mallorca</span><strong>COLLERENSE</strong></span>
         </a>
@@ -84,7 +84,7 @@ class Footer extends HTMLElement {
           <li><img src="imagenes/logo-canapaulina.png" alt="Ca Na Paulina" width="76" height="86" loading="lazy"></li>
           <li><img src="imagenes/logo-aireuropa.png" alt="Air Europa" width="160" height="35" loading="lazy"></li>
         </ul>
-        <a class="footer-button" href="https://udcollerense.inxenio.com/colaboradores/">Ver todos los colaboradores <svg class="footer-external-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h8v8M13 3 3 13"/></svg></a>
+        <a class="footer-button" href="./colaboradores.html">Ver todos los colaboradores <svg class="footer-external-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
       </section>
     </div>
 
@@ -93,7 +93,7 @@ class Footer extends HTMLElement {
         <h2>Anúnciate con nosotros</h2>
         <p>Forma parte de la familia del Collerense.</p>
       </div>
-      <a class="footer-button" href="https://udcollerense.inxenio.com/contactar/">Contactar con el club <svg class="footer-external-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h8v8M13 3 3 13"/></svg></a>
+      <a class="footer-button" href="./contacto.html">Contactar con el club <svg class="footer-external-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
     </div>
 
     <div class="footer-bottom">

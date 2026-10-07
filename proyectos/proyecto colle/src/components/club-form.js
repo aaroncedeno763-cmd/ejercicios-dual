@@ -67,7 +67,7 @@ class ClubForm extends HTMLElement {
             <p class="availability" id="availability">Las solicitudes online estarán disponibles próximamente. Por ahora, puedes contactar con el club.</p>
             <button class="submit" type="submit" disabled>Enviar solicitud · Próximamente</button>
           </form>
-          <p class="contact"><a href="https://udcollerense.inxenio.com/contactar/">Contactar con el club</a></p>
+          <p class="contact"><a href="./contacto.html">Contactar con el club</a></p>
         </div>
       </dialog>
     `
