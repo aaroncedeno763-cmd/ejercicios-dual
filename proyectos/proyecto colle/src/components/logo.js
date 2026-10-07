@@ -13,103 +13,16 @@ class Logo extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
     <style>
-      *{
-        margin: 0;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: hsl(208, 100%, 97%);
-      }
+      :host { display: block; }
+      *, *::before, *::after { box-sizing: border-box; }
+      a, button { -webkit-tap-highlight-color: transparent; }
+      button { font: inherit; cursor: pointer; }
+      a:focus-visible, button:focus-visible { outline: 3px solid #efbd69; outline-offset: 5px; }
 
-      .logo-escudo {
-        width: 5rem;
-        height: 5rem;
-      }
-
-      .title h1 {
-        font-size: 2rem;
-        font-weight: 800;
-      }
-
-      .title p {
-        font-size: 0.8rem;
-        font-weight: 300;
-        text-align: center;
-      }
-
-      @media (max-width:1150px) {
-        .logo-escudo {
-          width:4.5rem;
-          height:4.5rem;
-        }
-
-        .title h1 {
-          font-size:1.8rem;
-        }
-
-        .title p {
-          font-size:0.75rem;
-        }
-      }
-
-      @media (max-width:900px) {
-        .logo {
-          gap:0.4rem;
-        }
-
-        .logo-escudo {
-          width:4rem;
-          height:4rem;
-        }
-
-        .title h1 {
-          font-size:1.5rem;
-        }
-
-        .title p {
-          font-size:0.7rem;
-        }
-      }
-
-      @media (max-width:768px) {
-        .logo {
-          gap:0.3rem;
-        }
-
-        .logo-escudo {
-          width:3.5rem;
-          height:3.5rem;
-        }
-
-        .title h1 {
-          font-size:1.2rem;
-        }
-
-        .title p {
-          font-size:0.6rem;
-        }
-      }
-
-      @media (max-width:600px) {
-        .logo {
-          gap:0.25rem;
-        }
-
-        .logo-escudo {
-          width:3.5rem;
-          height:3.5rem;
-        }
-
-        .title h1 {
-          font-size:1.1rem;
-        }
-
-        .title p {
-          font-size:0.6rem;
-        }
-      }
+      .logo { display: flex; align-items: center; gap: .9rem; color: white; }
+      .logo-escudo { width: 58px; height: 66px; object-fit: contain; flex-shrink: 0; }
+      h1 { font-size: clamp(1.3rem, 2vw, 1.6rem); letter-spacing: .06em; line-height: 1.1; margin: .3rem 0 0; }
+      p { margin: 0; font-size: .7rem; color: #c1cbe0; letter-spacing: .1em; text-transform: uppercase; }
     </style>
 
     <div class="logo">
