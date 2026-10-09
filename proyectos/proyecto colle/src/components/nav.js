@@ -13,161 +13,39 @@ class Nav extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
     <style>
-      nav {
-        display: flex;
-        align-items: center;
-        gap: 15rem;
-      }
+      :host { display: block; }
+      *, *::before, *::after { box-sizing: border-box; }
+      a, button { -webkit-tap-highlight-color: transparent; }
+      button { font: inherit; cursor: pointer; }
+      a:focus-visible, button:focus-visible { outline: 3px solid #efbd69; outline-offset: 5px; }
 
-      nav ul {
-        display: flex;
-        list-style: none;
-        gap: 1.8rem;
-      }
-
-      nav a {
-        color: hsl(40, 37%, 92%);
-        text-decoration: none;
-      }
-
-      nav a:hover {
-        color: hsl(38, 54%, 54%);
-      }
-
-      .cuenta {
-        display: flex;
-        gap: 0.8rem;
-      }
-
-      .cuenta button {
-        padding: 0.5rem 1.2rem;
-        border: none;
-        border-radius: 0.25rem;
-        cursor: pointer;
-      }
-
-      .registrate button {
-        background-color: hsl(38, 54%, 54%);
-        color: hsl(352, 63%, 18%);
-      }
-
-      .iniciar-sesion button {
-        background-color: transparent;
-        color: hsl(40, 37%, 92%);
-        border: 1px solid hsl(40, 37%, 92%);
-      }
-
-
-      @media (max-width:1150px) {
-        nav {
-          gap:1.5rem;
-        }
-
-        nav ul {
-          gap:1rem;
-        }
-
-        nav a {
-          font-size:0.8rem;
-        }
-
-        .cuenta {
-          gap:0.5rem;
-        }
-
-        .cuenta button {
-          padding:0.4rem 0.8rem;
-        }
-      }
-
-      @media (max-width:900px) {
-        nav {
-          gap:1rem;
-        }
-
-        nav ul {
-          gap:0.7rem;
-        }
-
-        nav a {
-          font-size:0.75rem;
-        }
-
-        .cuenta button {
-          padding:0.4rem 0.6rem;
-         font-size:0.75rem;
-        }
-      }
-
-      @media (max-width:768px) {
-        nav {
-          gap:0.8rem;
-        }
-
-        nav ul {
-          gap:0.5rem;
-        }
-
-        nav a {
-          font-size:0.7rem;
-        }
-
-        .cuenta {
-          gap:0.3rem;
-        }
-
-        .cuenta button {
-          padding:0.35rem 0.5rem;
-          font-size:0.7rem;
-        }
-      }
-
-      @media (max-width:600px) {
-        nav {
-          width:100%;
-          gap:0.5rem;
-          flex-direction:column;
-        }
-
-        nav ul {
-          width:100%;
-          justify-content:center;
-          gap:0.6rem;
-        }
-
-        nav a {
-          font-size:0.65rem;
-          white-space:nowrap;
-        }
-
-        .cuenta {
-          gap:0.4rem;
-        }
-
-        .cuenta button {
-          padding:0.35rem 0.6rem;
-          font-size:0.65rem;
-        }
-      }
+      nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+      ul { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem 1rem; list-style: none; margin: 0; padding: 0; }
+      a { display: inline-block; color: #e8edf7; text-decoration: none; font-size: .85rem; font-weight: 600; padding: .65rem 0; transition: color .2s; }
+      a[aria-current="page"] { color: var(--dorado); text-decoration: underline; text-underline-offset: 6px; }
+      a:hover { color: var(--dorado); }
+      @media (max-width: 680px) { nav { align-items: stretch; flex-direction: column; gap: .8rem; } ul { gap: .2rem 1rem; } a { font-size: .875rem; } }
     </style>
 
-   <nav>
+   <nav aria-label="Navegación principal">
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#club">El Club</a></li>
-        <li><a href="#categorias">Categorías</a></li>
-        <li><a href="#horarios">Horarios</a></li>
-        <li><a href="#partidos">Partidos</a></li>
-        <li><a href="#noticias">Noticias</a></li>
-        <li><a href="#entrenadores">Entrenadores</a></li>
+        <li><a href="./furbo.html#inicio">Inicio</a></li>
+        <li><a href="./furbo.html#club">El Club</a></li>
+        <li><a href="./furbo.html#categorias">Categorías</a></li>
+        <li><a href="./furbo.html#horarios">Horarios</a></li>
+        <li><a href="./furbo.html#partidos">Partidos</a></li>
+        <li><a href="./furbo.html#noticias">Noticias</a></li>
+        <li><a href="./furbo.html#entrenadores">Entrenadores</a></li>
       </ul>
 
-      <div class="cuenta">
-        <div class="registrate"><button>Registrate</button></div>
-        <div class="iniciar-sesion"><button>Iniciar sesión</button></div>
-      </div>
     </nav>
     `
+    this.shadow.querySelectorAll('a').forEach(link => {
+      const target = new URL(link.href)
+      if (!target.hash && target.pathname === window.location.pathname) {
+        link.setAttribute('aria-current', 'page')
+      }
+    })
   }
 }
 

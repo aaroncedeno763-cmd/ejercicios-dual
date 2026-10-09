@@ -13,165 +13,50 @@ class Hero extends HTMLElement {
     this.shadow.innerHTML =
       /*html*/`
     <style>
-     .hero {
-        position: relative;
-        width: 100%;
-        min-height: 90vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        box-sizing: border-box;
-        overflow: hidden;
-      }
+      :host { display: block; }
+      *, *::before, *::after { box-sizing: border-box; }
+      a, button { -webkit-tap-highlight-color: transparent; }
+      button { font: inherit; cursor: pointer; }
+      a:focus-visible, button:focus-visible { outline: 3px solid #efbd69; outline-offset: 5px; }
 
-      .hero-fondo-campo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(hsla(0, 0%, 0%, 0.42));
-        z-index: 1;
-      }
-
-      .hero-llamada-a-la-accion {
-        position: relative;
-        background: transparent;
-        padding: 3rem 2rem;
-        max-width: 800px;
-        text-align: center;
-        color: hsl(0, 0%, 100%);
-        z-index: 2;
-      }
-
-      .hero-titulo h3 {
-        font-family: 'Arial', sans-serif;
-        font-size: 1rem;
-        font-weight: 800;
-        margin: 0 0 1rem 0;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.5);
-      }
-
-      .hero-titulo h2 {
-        font-family: 'Arial', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin: 0 0 1rem 0;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.5);
-      }
-
-      .hero-descripcion p {
-        font-size: 1.3rem;
-        line-height: 1.6;
-        margin-bottom: 2.5rem;
-        color: hsl(0, 0%, 89%);
-        font-weight: 300;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-boton button {
-        background-color: transparent;
-        color: hsl(0, 0%, 100%);
-        border: 2px solid hsl(48, 100%, 50%);
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
-        font-weight: bold;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .hero-boton button:hover {
-        background-color: hsl(48, 100%, 50%);
-        color: hsl(347, 70%, 17%);
-        box-shadow: 0 0 20px hsl(38, 54%, 54%);
-      }
-
-      @media (max-width: 1150px) {
-        .hero-titulo h2 {
-          font-size: 2rem;
-        }
-        .hero-titulo h3 {
-          font-size: 0.8rem;
-        }
-        .hero-descripcion p {
-          font-size: 1rem;
-        }
-        .hero-boton button {
-          font-size: 0.8rem;
-        }
-      }
-
-      @media (max-width: 900px) {
-        .hero-titulo h2 {
-          font-size: 1.5rem;
-        }
-        .hero-titulo h3 {
-          font-size: 0.7rem;
-        }
-        .hero-descripcion p {
-          font-size: 0.9rem;
-        }
-        .hero-boton button {
-          font-size: 0.7rem;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero-titulo h2 {
-          font-size: 1rem;
-        }
-        .hero-titulo h3 {
-          font-size: 0.6rem;
-        }
-        .hero-descripcion p {
-          font-size: 0.8rem;
-        }
-        .hero-boton button {
-          font-size: 0.6rem;
-        }
-      }
+      .hero { position: relative; isolation: isolate; overflow: hidden; min-height: 620px; display: flex; align-items: center; background: var(--azul); color: white; }
+      .hero-fondo-campo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: .4; }
+      .hero-overlay { position: absolute; inset: 0; z-index: -2; background: linear-gradient(110deg, #14264df2 0%, #352346e6 50%, #751d2ad9 100%); }
+      .hero::after { content: ''; position: absolute; width: 400px; height: 400px; right: -190px; bottom: -210px; border: 55px solid #efbd6940; border-radius: 50%; z-index: -1; }
+      .hero-llamada-a-la-accion { width: 100%; max-width: 1440px; margin: auto; padding: 5rem clamp(1rem, 4vw, 4rem); }
+      .hero-titulo h3 { display: inline-flex; align-items: center; gap: .7rem; margin: 0 0 1.75rem; color: var(--dorado); font-size: .8rem; font-weight: 700; letter-spacing: .22em; }
+      .hero-titulo h3::before { content: ''; width: 2rem; height: 2px; background: currentColor; }
+      .hero-titulo h2 { max-width: 850px; margin: 0; font-size: clamp(2.4rem, 5.8vw, 5.5rem); font-weight: 900; line-height: 1.04; letter-spacing: -.045em; text-wrap: balance; }
+      .hero-descripcion p { max-width: 500px; margin: 1.75rem 0 2rem; color: #d9e1ef; font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.75; }
+      .hero-boton button { min-height: 50px; padding: .9rem 1.5rem; border: none; border-radius: 6px; background: var(--rojo); color: white; font-weight: 700; box-shadow: 0 8px 24px #0003; transition: background .2s, transform .2s; }
+      .hero-boton button:hover { background: #b72236; transform: translateY(-2px); }
+      @media (max-width: 680px) { .hero { min-height: 520px; } .hero-llamada-a-la-accion { padding-top: 3.5rem; padding-bottom: 4rem; } .hero-overlay { background: linear-gradient(135deg, #14264df2, #751d2ae6); } }
+      @media (prefers-reduced-motion: reduce) { button { transition: none !important; transform: none !important; } }
     </style>
 
     <section class="hero">
       <img
         src="https://e7dudgsx8ec.exactdn.com/latinoamerica/wp/wp-content/uploads/2020/05/Grama-artificial-para-futbol.jpg?strip=all&lossy=1&sharp=1&ssl=1"
-        alt="Campo de fútbol" class="hero-fondo-campo">
+        alt="" aria-hidden="true" class="hero-fondo-campo">
       <div class="hero-overlay"></div>
       <div class="hero-llamada-a-la-accion">
         <div class="hero-titulo">
           <h3>DESDE 1967</h3>
-          <h2>ORGULL DEL COLL D'EN REBASSA</h2>
+          <h2>ORGULL DEL COLL D'EN RABASSA</h2>
         </div>
         <div class="hero-descripcion">
           <p>Más que un club, una familia. Hazte socio y vive el Collerense desde dentro.</p>
         </div>
         <div class="hero-boton">
-          <button>Únete al club</button>
+          <button type="button" aria-haspopup="dialog">Únete al club</button>
         </div>
       </div>
     </section>
     `
 
+    this.shadow.querySelector('.hero-boton button').addEventListener('click', () => {
+      this.dispatchEvent(new CustomEvent('club-join', { bubbles: true, composed: true }))
+    })
   }
 }
 

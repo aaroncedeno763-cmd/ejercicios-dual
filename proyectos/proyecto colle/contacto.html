@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylefurbo.css">
   <script type="module" src="src/index.js"></script>
-  <title>Collerense</title>
+  <title>Contacto · Collerense</title>
 </head>
-
 <body>
-
   <header-component>
     <logo-component></logo-component>
     <nav-component></nav-component>
   </header-component>
-
   <main id="inicio">
-    <hero-component></hero-component>
-    <tarjeta-component></tarjeta-component>
+    <page-heading-component>
+      <h1 slot="title">Contacto</h1>
+      <p slot="description">Socios, colaboradores y aficionados: estamos aquí para escucharte.</p>
+    </page-heading-component>
+    <contacto-component></contacto-component>
   </main>
-
   <footer-component></footer-component>
-  <club-form-component></club-form-component>
 </body>
-
 </html>
